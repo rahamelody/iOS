@@ -1,6 +1,7 @@
 # International Talking Calculator Midterm
 + Cool feature: Sings the beggining of Taylor Swift's Welcome To New York when opened
 + Cool feature: images of new york as background for day mode and night mode, plus day and night city icons in the label
++ Directed towards tourists specifically coming to NYC
 + Written in Swift.
 + Video: https://vimeo.com/144064084
 
