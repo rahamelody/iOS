@@ -2,6 +2,7 @@
 + Cool feature: Sings the beggining of Taylor Swift's Welcome To New York when opened
 + Cool feature: images of new york as background for day mode and night mode, plus day and night city icons in the label
 + Written in Swift.
++ Video: https://vimeo.com/144064084
 
 ## Icon
 ![ScreenShot](https://scontent.fphl1-1.fna.fbcdn.net/hphotos-xtp1/v/t34.0-12/12201012_10153730359601241_1491923621_n.jpg?oh=541b55ef80f722e04649f719ebff27fe&oe=5634F85C)
