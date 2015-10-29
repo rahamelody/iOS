@@ -20,6 +20,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var lastButtonWasMode:Bool = false
     var edgeCase:Bool = false
     
+    
+    
    
     
     var language = [("en-US", "American English", "🇺🇸"),
@@ -40,7 +42,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                     ("fr-FR", "Français", "🇫🇷"),
                     ("de-DE", "Deutsche", "🇩🇪"),
                     ("el-GR", "ελληνική", "🇬🇷"),
-                    ("he-IL", "Hebrew", "🇮🇱"),
+                    ("he-IL", "עברית", "🇮🇱"),
                     ("hi-IN", "हिन्दी", "🇮🇳"),
                     ("hu-HU", "Hungarian", "🇭🇺"),
                     ("id-ID", "Bahasa Indonesia", "🇮🇩"),
@@ -120,51 +122,83 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         speakThisString(language[row].1)
     }
     
-    func lottoSpin()->Int {
-        let index = 1 + random() % language.count
-        return index
-    }
     
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = language[row].1
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 25.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        return myTitle
+        
+        
+        
+    }
+
+    
+    
+    
+    var audioPlayer:AVAudioPlayer!
+   
+   
  
     
   //MARK: the settings that load when the iphone first opens the app
     override func viewDidLoad() {
         super.viewDidLoad()
-        speakThisString("Welcome to New York City! Select a Language.")
-        self.view.backgroundColor = UIColor.whiteColor()
+        do {
+            try! audioPlayer = AVAudioPlayer(contentsOfURL: NSURL (fileURLWithPath: NSBundle.mainBundle().pathForResource("tay", ofType: "mp3")!), fileTypeHint:nil)
+        }
+        audioPlayer.play()
+        label.text = "Welcome to NYC! 🌇"
+    
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "park1.png")!)
         label.textColor = UIColor.blackColor()
-        zero.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        zero.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         zero.titleLabel?.textColor = UIColor.blackColor()
-        one.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.zero.layer.cornerRadius = 5
+        one.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         one.titleLabel?.textColor = UIColor.blackColor()
-        two.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.one.layer.cornerRadius = 5
+        two.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         two.titleLabel?.textColor = UIColor.blackColor()
-        three.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.two.layer.cornerRadius = 5
+        three.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         three.titleLabel?.textColor = UIColor.blackColor()
-        four.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.three.layer.cornerRadius = 5
+        four.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         four.titleLabel?.textColor = UIColor.blackColor()
-        five.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.four.layer.cornerRadius = 5
+        five.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         five.titleLabel?.textColor = UIColor.blackColor()
-        six.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.five.layer.cornerRadius = 5
+        six.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         six.titleLabel?.textColor = UIColor.blackColor()
-        seven.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.six.layer.cornerRadius = 5
+        seven.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         seven.titleLabel?.textColor = UIColor.blackColor()
-        eight.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.seven.layer.cornerRadius = 5
+        eight.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         eight.titleLabel?.textColor = UIColor.blackColor()
-        nine.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+        self.eight.layer.cornerRadius = 5
+        nine.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
         nine.titleLabel?.textColor = UIColor.blackColor()
+        self.nine.layer.cornerRadius = 5
         plus.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
         plus.titleLabel?.textColor = UIColor.blackColor()
+        self.plus.layer.cornerRadius = 5
         minus.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
         minus.titleLabel?.textColor = UIColor.blackColor()
+        self.minus.layer.cornerRadius = 5
         multiply.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
         multiply.titleLabel?.textColor = UIColor.blackColor()
+        self.multiply.layer.cornerRadius = 5
         equal.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
         equal.titleLabel?.textColor = UIColor.blackColor()
+        self.equal.layer.cornerRadius = 5
         divide.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
         divide.titleLabel?.textColor = UIColor.blackColor()
+        self.divide.layer.cornerRadius = 5
         clear.backgroundColor = UIColor(red: 0.2, green: 0.9, blue: 0.7, alpha: 1)
         clear.titleLabel?.textColor = UIColor.blackColor()
+        self.clear.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -176,125 +210,145 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     //MARK: segmented control changing UI elements
     
+    
     @IBAction func toggleControls(sender: UISegmentedControl) {
         
         if(sender.selectedSegmentIndex == 0) {
+            label.text = "🌇"
 
-            self.view.backgroundColor = UIColor.whiteColor()
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "park1.png")!)
             label.textColor = UIColor.blackColor()
-            zero.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.zero.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            zero.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.5)
             zero.titleLabel?.textColor = UIColor.blackColor()
-            one.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.one.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            one.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
             one.titleLabel?.textColor = UIColor.blackColor()
-            two.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.two.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            two.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.5)
             two.titleLabel?.textColor = UIColor.blackColor()
-            three.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.three.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            three.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
             three.titleLabel?.textColor = UIColor.blackColor()
-            four.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.four.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            four.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.5)
             four.titleLabel?.textColor = UIColor.blackColor()
-            five.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.five.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            five.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
             five.titleLabel?.textColor = UIColor.blackColor()
-            six.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.six.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            six.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.5)
             six.titleLabel?.textColor = UIColor.blackColor()
-            seven.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.seven.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            seven.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
             seven.titleLabel?.textColor = UIColor.blackColor()
-            eight.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.eight.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            eight.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
             eight.titleLabel?.textColor = UIColor.blackColor()
-            nine.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1)
+            self.nine.layer.borderColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 1).CGColor
+            nine.backgroundColor = UIColor(red: 0.3, green: 0.9, blue: 0.5, alpha: 0.65)
             nine.titleLabel?.textColor = UIColor.blackColor()
+            self.plus.layer.borderColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1).CGColor
             plus.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
             plus.titleLabel?.textColor = UIColor.blackColor()
+            self.minus.layer.borderColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1).CGColor
             minus.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
             minus.titleLabel?.textColor = UIColor.blackColor()
+            self.multiply.layer.borderColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1).CGColor
             multiply.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
             multiply.titleLabel?.textColor = UIColor.blackColor()
+            self.equal.layer.borderColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1).CGColor
             equal.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
             equal.titleLabel?.textColor = UIColor.blackColor()
+            self.divide.layer.borderColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1).CGColor
             divide.backgroundColor = UIColor(red: 0.78, green: 0.85, blue: 0.2, alpha: 1)
             divide.titleLabel?.textColor = UIColor.blackColor()
+            self.clear.layer.borderColor = UIColor(red: 0.2, green: 0.9, blue: 0.7, alpha: 1).CGColor
             clear.backgroundColor = UIColor(red: 0.2, green: 0.9, blue: 0.7, alpha: 1)
             clear.titleLabel?.textColor = UIColor.blackColor()
         }
         if(sender.selectedSegmentIndex == 1) {
-            self.view.backgroundColor = UIColor.darkGrayColor()
+            label.text = "🌃"
+            
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fidi.png")!)
             label.textColor = UIColor.whiteColor()
-            zero.backgroundColor = UIColor.darkGrayColor()
-            zero.titleLabel?.textColor = UIColor.whiteColor()
+            zero.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            zero.titleLabel?.textColor = UIColor.whiteColor()
             self.zero.layer.cornerRadius = 5
             self.zero.layer.borderWidth = 2
             self.zero.layer.borderColor = UIColor.whiteColor().CGColor
-            one.backgroundColor = UIColor.darkGrayColor()
-            one.titleLabel?.textColor = UIColor.whiteColor()
+            one.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            one.titleLabel?.textColor = UIColor.whiteColor()
             self.one.layer.cornerRadius = 5
             self.one.layer.borderWidth = 2
             self.one.layer.borderColor = UIColor.whiteColor().CGColor
-            two.backgroundColor = UIColor.darkGrayColor()
-            two.titleLabel?.textColor = UIColor.whiteColor()
+            two.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            two.titleLabel?.textColor = UIColor.whiteColor()
             self.two.layer.cornerRadius = 5
             self.two.layer.borderWidth = 2
             self.two.layer.borderColor = UIColor.whiteColor().CGColor
-            three.backgroundColor = UIColor.darkGrayColor()
-            three.titleLabel?.textColor = UIColor.whiteColor()
+            three.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            three.titleLabel?.textColor = UIColor.whiteColor()
             self.three.layer.cornerRadius = 5
             self.three.layer.borderWidth = 2
             self.three.layer.borderColor = UIColor.whiteColor().CGColor
-            four.backgroundColor = UIColor.darkGrayColor()
-            four.titleLabel?.textColor = UIColor.whiteColor()
+            four.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            four.titleLabel?.textColor = UIColor.whiteColor()
             self.four.layer.cornerRadius = 5
             self.four.layer.borderWidth = 2
             self.four.layer.borderColor = UIColor.whiteColor().CGColor
-            five.backgroundColor = UIColor.darkGrayColor()
-            five.titleLabel?.textColor = UIColor.whiteColor()
+            five.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            five.titleLabel?.textColor = UIColor.whiteColor()
             self.five.layer.cornerRadius = 5
             self.five.layer.borderWidth = 2
             self.five.layer.borderColor = UIColor.whiteColor().CGColor
-            six.backgroundColor = UIColor.darkGrayColor()
-            six.titleLabel?.textColor = UIColor.whiteColor()
+            six.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            six.titleLabel?.textColor = UIColor.whiteColor()
             self.six.layer.cornerRadius = 5
             self.six.layer.borderWidth = 2
             self.six.layer.borderColor = UIColor.whiteColor().CGColor
-            seven.backgroundColor = UIColor.darkGrayColor()
-            seven.titleLabel?.textColor = UIColor.whiteColor()
+            seven.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            seven.titleLabel?.textColor = UIColor.whiteColor()
             self.seven.layer.cornerRadius = 5
             self.seven.layer.borderWidth = 2
             self.seven.layer.borderColor = UIColor.whiteColor().CGColor
-            eight.backgroundColor = UIColor.darkGrayColor()
-            eight.titleLabel?.textColor = UIColor.whiteColor()
+            eight.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            eight.titleLabel?.textColor = UIColor.whiteColor()
             self.eight.layer.cornerRadius = 5
             self.eight.layer.borderWidth = 2
             self.eight.layer.borderColor = UIColor.whiteColor().CGColor
-            nine.backgroundColor = UIColor.darkGrayColor()
-            nine.titleLabel?.textColor = UIColor.whiteColor()
+            nine.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
+//            nine.titleLabel?.textColor = UIColor.whiteColor()
             self.nine.layer.cornerRadius = 5
             self.nine.layer.borderWidth = 2
             self.nine.layer.borderColor = UIColor.whiteColor().CGColor
             plus.backgroundColor = UIColor.grayColor()
-            plus.titleLabel?.textColor = UIColor.whiteColor()
+//            plus.titleLabel?.textColor = UIColor.whiteColor()
             self.plus.layer.cornerRadius = 5
             self.plus.layer.borderWidth = 2
             self.plus.layer.borderColor = UIColor.whiteColor().CGColor
             minus.backgroundColor = UIColor.grayColor()
-            minus.titleLabel?.textColor = UIColor.whiteColor()
+//            minus.titleLabel?.textColor = UIColor.whiteColor()
             self.minus.layer.cornerRadius = 5
             self.minus.layer.borderWidth = 2
             self.minus.layer.borderColor = UIColor.whiteColor().CGColor
             multiply.backgroundColor = UIColor.grayColor()
-            multiply.titleLabel?.textColor = UIColor.whiteColor()
+//            multiply.titleLabel?.textColor = UIColor.whiteColor()
             self.multiply.layer.cornerRadius = 5
             self.multiply.layer.borderWidth = 2
             self.multiply.layer.borderColor = UIColor.whiteColor().CGColor
             equal.backgroundColor = UIColor.grayColor()
-            equal.titleLabel?.textColor = UIColor.whiteColor()
+//            equal.titleLabel?.textColor = UIColor.whiteColor()
             self.equal.layer.cornerRadius = 5
             self.equal.layer.borderWidth = 2
             self.equal.layer.borderColor = UIColor.whiteColor().CGColor
-            clear.backgroundColor = UIColor.lightGrayColor()
-            clear.titleLabel?.textColor = UIColor.whiteColor()
+            clear.backgroundColor = UIColor.whiteColor()
+//            clear.titleLabel?.textColor = UIColor.whiteColor()
             self.clear.layer.cornerRadius = 5
             self.clear.layer.borderWidth = 2
             self.clear.layer.borderColor = UIColor.whiteColor().CGColor
             divide.backgroundColor = UIColor.grayColor()
-            divide.titleLabel?.textColor = UIColor.whiteColor()
+//            divide.titleLabel?.textColor = UIColor.whiteColor()
             self.divide.layer.cornerRadius = 5
             self.divide.layer.borderWidth = 2
             self.divide.layer.borderColor = UIColor.whiteColor().CGColor
@@ -433,7 +487,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         {
         total = Int(valueString)!
         }
-        speakThisString(str)
+        speakThisString(valueString)
         
         
         

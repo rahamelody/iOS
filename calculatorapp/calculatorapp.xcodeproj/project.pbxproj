@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D298B6A1BDAA9D300EEEA93 /* tay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D298B691BDAA9D300EEEA93 /* tay.mp3 */; settings = {ASSET_TAGS = (); }; };
 		0D426EBE1BBE0954008EBC17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D426EBD1BBE0954008EBC17 /* AppDelegate.swift */; };
 		0D426EC01BBE0954008EBC17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D426EBF1BBE0954008EBC17 /* ViewController.swift */; };
 		0D426EC31BBE0954008EBC17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D426EC11BBE0954008EBC17 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D298B691BDAA9D300EEEA93 /* tay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tay.mp3; sourceTree = "<group>"; };
 		0D426EBA1BBE0954008EBC17 /* calculatorapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculatorapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D426EBD1BBE0954008EBC17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D426EBF1BBE0954008EBC17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		0D426EB11BBE0954008EBC17 = {
 			isa = PBXGroup;
 			children = (
+				0D298B691BDAA9D300EEEA93 /* tay.mp3 */,
 				0D426EBC1BBE0954008EBC17 /* calculatorapp */,
 				0D426ED11BBE0954008EBC17 /* calculatorappTests */,
 				0D426EDC1BBE0954008EBC17 /* calculatorappUITests */,
@@ -231,6 +234,7 @@
 				0D426EC81BBE0954008EBC17 /* LaunchScreen.storyboard in Resources */,
 				0D426EC51BBE0954008EBC17 /* Assets.xcassets in Resources */,
 				0D426EC31BBE0954008EBC17 /* Main.storyboard in Resources */,
+				0D298B6A1BDAA9D300EEEA93 /* tay.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +485,7 @@
 				0D426EE41BBE0954008EBC17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D426EE51BBE0954008EBC17 /* Build configuration list for PBXNativeTarget "calculatorappTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				0D426EE71BBE0954008EBC17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D426EE81BBE0954008EBC17 /* Build configuration list for PBXNativeTarget "calculatorappUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				0D426EEA1BBE0954008EBC17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
