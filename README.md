@@ -2,6 +2,7 @@
 + Cool feature: Sings the beggining of Taylor Swift's Welcome To New York when opened
 + Cool feature: images of new york as background for day mode and night mode, plus day and night city icons in the label
 + image backgrounds added using code: self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fidi.png")!), changed by adding different ones to the segmented control
++ changed font and font color of picker
 + Directed towards tourists specifically coming to NYC
 + Written in Swift.
 + Video: https://vimeo.com/144064084
