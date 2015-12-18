@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Jeb Bush</string>
+		<key>Speaker</key>
+		<string>Former Governor of Florida</string>
+		<key>Room</key>
+		<string>Miami, FL</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>JebBush1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Ben Carson</string>
+		<key>Speaker</key>
+		<string>Former Neurosurgeon</string>
+		<key>Room</key>
+		<string>Baltimore, MD</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>bencarson1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Chris Christie</string>
+		<key>Speaker</key>
+		<string>Governor of New Jersey</string>
+		<key>Room</key>
+		<string>Mendham, NJ</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>chrischristie1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Hillary Clinton</string>
+		<key>Speaker</key>
+		<string>Former Secretary of State</string>
+		<key>Room</key>
+		<string>Chappaqua, NY</string>
+		<key>Time</key>
+		<string>D</string>
+		<key>Background</key>
+		<string>HillaryClinton</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Ted Cruz</string>
+		<key>Speaker</key>
+		<string>U.S. Senator, Texas</string>
+		<key>Room</key>
+		<string>Houston, TX</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>TedCruz1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Carly Fiorina</string>
+		<key>Speaker</key>
+		<string>Former CEO of HP</string>
+		<key>Room</key>
+		<string>Los Altos Hills, CA</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>carly1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Jim Gilmore</string>
+		<key>Speaker</key>
+		<string>Former Governor of Virginia</string>
+		<key>Room</key>
+		<string>Henrico County, VA</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>jimgilmore1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Lindsey Graham</string>
+		<key>Speaker</key>
+		<string>U.S. Senator, South Carolina</string>
+		<key>Room</key>
+		<string>Seneca, SC</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>lindseygraham1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Mike Huckabee</string>
+		<key>Speaker</key>
+		<string>Former Governor of Arkansas</string>
+		<key>Room</key>
+		<string>North Little Rock, AR</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>MikeHuckabee1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>John Kasich</string>
+		<key>Speaker</key>
+		<string>Governor of Ohio</string>
+		<key>Room</key>
+		<string>Westerville, Ohio</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>johnkasich1</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Martin O&apos;Malley</string>
+		<key>Speaker</key>
+		<string>Former Governor of Maryland</string>
+		<key>Room</key>
+		<string>Baltimore, MD</string>
+		<key>Time</key>
+		<string>D</string>
+		<key>Background</key>
+		<string>MartinOMalley</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>George Pataki</string>
+		<key>Speaker</key>
+		<string>Former Governor of New York</string>
+		<key>Room</key>
+		<string>Peekskill, NY</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>georgepataki</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Marco Rubio</string>
+		<key>Speaker</key>
+		<string>U.S. Senator, Florida</string>
+		<key>Room</key>
+		<string>West Miami, FL</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>MARCORUBIO</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Bernie Sanders</string>
+		<key>Speaker</key>
+		<string>U.S. Senator, Vermont</string>
+		<key>Room</key>
+		<string>Burlington, VT</string>
+		<key>Time</key>
+		<string>D</string>
+		<key>Background</key>
+		<string>BERNIESANDERS</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Rick Santorum</string>
+		<key>Speaker</key>
+		<string>Former U.S. Senator, Pennsylviania</string>
+		<key>Room</key>
+		<string>Mount Lebanon, PA</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>RICKSANTORUM</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Jill Stein</string>
+		<key>Speaker</key>
+		<string>Physician</string>
+		<key>Room</key>
+		<string>Lexington, MA</string>
+		<key>Time</key>
+		<string>G</string>
+		<key>Background</key>
+		<string>JillStein</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Donald Trump</string>
+		<key>Speaker</key>
+		<string>President, Trump Organization</string>
+		<key>Candidate</key>
+		<false/>
+		<key>Room</key>
+		<string>Manhattan, NY</string>
+		<key>Time</key>
+		<string>R</string>
+		<key>Background</key>
+		<string>DonaldTrump</string>
+	</dict>
+</array>
+</plist>
