@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="usL-Tu-gln">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--TRENDING TOPICS-->
+        <scene sceneID="GAb-ki-uCL">
+            <objects>
+                <collectionViewController id="Gi5-eq-qj2" customClass="InspirationsViewController" customModule="Globalite" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tNe-IU-296">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="l6S-ab-jJ7" customClass="UltravisualLayout" customModule="Globalite" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InspirationCell" id="n3U-hs-Bjw" customClass="InspirationCell" customModule="Globalite" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTE-UP-31u">
+                                            <rect key="frame" x="0.0" y="-40" width="200" height="280"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="280" id="TdV-6a-O8e"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtC-0H-Spg">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ube-11-tcI">
+                                            <rect key="frame" x="0.0" y="78" width="200" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Vpd-Yk-uE9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="34"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="ube-11-tcI" firstAttribute="leading" secondItem="n3U-hs-Bjw" secondAttribute="leading" id="4fK-CA-LOD"/>
+                                    <constraint firstAttribute="centerY" secondItem="ube-11-tcI" secondAttribute="centerY" id="EU2-w5-3GM"/>
+                                    <constraint firstItem="TtC-0H-Spg" firstAttribute="top" secondItem="n3U-hs-Bjw" secondAttribute="top" id="Rm0-w3-T0f"/>
+                                    <constraint firstAttribute="bottom" secondItem="TtC-0H-Spg" secondAttribute="bottom" id="abj-JO-u5C"/>
+                                    <constraint firstAttribute="trailing" secondItem="JTE-UP-31u" secondAttribute="trailing" id="ebG-ig-cYy"/>
+                                    <constraint firstItem="JTE-UP-31u" firstAttribute="leading" secondItem="n3U-hs-Bjw" secondAttribute="leading" id="krm-XY-ZWw"/>
+                                    <constraint firstAttribute="trailing" secondItem="TtC-0H-Spg" secondAttribute="trailing" id="l5A-fQ-QUj"/>
+                                    <constraint firstAttribute="centerY" secondItem="JTE-UP-31u" secondAttribute="centerY" id="lX5-4E-rrf"/>
+                                    <constraint firstItem="TtC-0H-Spg" firstAttribute="leading" secondItem="n3U-hs-Bjw" secondAttribute="leading" id="pSB-yt-1sO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ube-11-tcI" secondAttribute="trailing" id="tJJ-DC-7oF"/>
+                                </constraints>
+                                <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="imageCoverView" destination="TtC-0H-Spg" id="8e8-zR-RMA"/>
+                                    <outlet property="imageView" destination="JTE-UP-31u" id="Es5-uW-UoG"/>
+                                    <outlet property="titleLabel" destination="ube-11-tcI" id="ZrK-aG-R3Q"/>
+                                    <segue destination="WPQ-wv-DJk" kind="show" identifier="segue" id="6HF-zH-UOF"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Gi5-eq-qj2" id="3ch-Hp-kRG"/>
+                            <outlet property="delegate" destination="Gi5-eq-qj2" id="xW1-B0-dmE"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="TRENDING TOPICS" id="IWP-8N-gMA"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9E-Uw-G83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2168" y="432"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="JDN-f7-4NF">
+            <objects>
+                <tableViewController id="WPQ-wv-DJk" customClass="TableViewController" customModule="Globalite" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="XQg-cz-ugp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="59O-0h-KBY" customClass="TableViewCell" customModule="Globalite" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="59O-0h-KBY" id="1Ji-ur-jJe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COUNTRY NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-3u-lfV">
+                                            <rect key="frame" x="0.0" y="0.0" width="134" height="22.5"/>
+                                            <color key="backgroundColor" red="0.15686274509803921" green="1" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, aliqua. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSG-xW-YFz">
+                                            <rect key="frame" x="8" y="30.5" width="359" height="49.5"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLk-b4-KNv">
+                                            <rect key="frame" x="8" y="71.5" width="359" height="70.5"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timesofindia" translatesAutoresizingMaskIntoConstraints="NO" id="vPE-tg-jKC">
+                                            <rect key="frame" x="233" y="0.0" width="134" height="22.5"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryName" destination="ee4-3u-lfV" id="Dra-3r-6wA"/>
+                                    <outlet property="headlineLabel" destination="pSG-xW-YFz" id="MUZ-hk-L3U"/>
+                                    <outlet property="publisherImage" destination="vPE-tg-jKC" id="zcA-eM-1Pm"/>
+                                    <outlet property="staffPickLabel" destination="lLk-b4-KNv" id="ELv-VM-5Cu"/>
+                                    <segue destination="7bW-0E-nO0" kind="show" identifier="detail" id="ZmE-bf-scQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WPQ-wv-DJk" id="si3-A1-iP8"/>
+                            <outlet property="delegate" destination="WPQ-wv-DJk" id="qRx-r7-q9z"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vF0-GI-9uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974.5" y="431.5"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="c3G-pG-wBk">
+            <objects>
+                <viewController id="7bW-0E-nO0" customClass="ArticleViewController" customModule="Globalite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oop-1L-nxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="MSi-20-xHz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gw0-pQ-h0l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iye-4U-Y8n">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5w-x4-0yK">
+                                <rect key="frame" x="20" y="327" width="335" height="291"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-k4-SRZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34683804898648651" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecugum odioque civiuda." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1D-sE-6lj">
+                                <rect key="frame" x="20" y="182" width="335" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timesofindia" translatesAutoresizingMaskIntoConstraints="NO" id="nky-V8-s7U">
+                                <rect key="frame" x="221" y="286" width="134" height="22.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UL-75-puo">
+                                <rect key="frame" x="20" y="317" width="335" height="2"/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="1" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuS-qs-haE">
+                                <rect key="frame" x="25" y="272" width="188" height="22.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="August, 10 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7L-RO-M9h">
+                                <rect key="frame" x="25" y="292.5" width="135" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="author" destination="MuS-qs-haE" id="uNm-ag-SPk"/>
+                        <outlet property="imageView" destination="Iye-4U-Y8n" id="Brv-hY-xLs"/>
+                        <outlet property="publisherImage" destination="nky-V8-s7U" id="sTr-nQ-rTE"/>
+                        <outlet property="textView" destination="m5w-x4-0yK" id="YOh-hR-oeO"/>
+                        <outlet property="titleLabel" destination="N1D-sE-6lj" id="4c5-HX-PWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UY-cJ-YdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3537.5" y="439.5"/>
+        </scene>
+        <!--Tab Bar-->
+        <scene sceneID="tja-Fz-2gr">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="usL-Tu-gln" customClass="TabBar" customModule="Globalite" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aQy-UE-CR7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MEe-zp-CnQ" kind="relationship" relationship="viewControllers" id="w1S-z9-5dP"/>
+                        <segue destination="41r-Ji-HnA" kind="relationship" relationship="viewControllers" id="Hvf-eC-WSg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGE-Xx-06Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="432"/>
+        </scene>
+        <!--TOP TODAY-->
+        <scene sceneID="8G8-H7-7zr">
+            <objects>
+                <viewController id="S8a-kq-OZh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zmr-uJ-qKI"/>
+                        <viewControllerLayoutGuide type="bottom" id="idv-T5-3bR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vyo-QF-yh6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmo-nC-d6V">
+                                <rect key="frame" x="0.0" y="64" width="188" height="188"/>
+                                <color key="backgroundColor" red="0.18146645016085461" green="1" blue="0.69569371321610918" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="france"/>
+                                <connections>
+                                    <segue destination="1dh-YE-808" kind="show" id="y9M-wb-tpm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FRANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJv-8a-TsO">
+                                <rect key="frame" x="0.0" y="64" width="134" height="22.5"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Paris attacks widower turns defiant message into book" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmH-gb-n9S">
+                                <rect key="frame" x="8" y="181" width="171" height="71"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-iH-hJc">
+                                <rect key="frame" x="187" y="64" width="188" height="188"/>
+                                <color key="backgroundColor" red="0.18146645019999999" green="1" blue="0.69569371319999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="germany"/>
+                                <connections>
+                                    <segue destination="1dh-YE-808" kind="show" id="f9T-H4-xCG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GERMANY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fj-So-qzb">
+                                <rect key="frame" x="187" y="64" width="134" height="22.5"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Opinion: America's Election Shame" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSD-H6-EvS">
+                                <rect key="frame" x="195" y="194" width="171" height="52.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH5-za-lid">
+                                <rect key="frame" x="0.0" y="252" width="188" height="188"/>
+                                <color key="backgroundColor" red="0.18146645019999999" green="1" blue="0.69569371319999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Russia"/>
+                                <connections>
+                                    <segue destination="1dh-YE-808" kind="show" id="eer-dB-0vy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RUSSIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgn-Ec-Phz">
+                                <rect key="frame" x="0.0" y="252" width="134" height="22.5"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Russia's Offshore Bandits: Hypocrisy Laid Bare by Panama Revelations" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-ll-0NI">
+                                <rect key="frame" x="8" y="351" width="171" height="89"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30K-Cg-Ua3">
+                                <rect key="frame" x="187" y="252" width="188" height="188"/>
+                                <color key="backgroundColor" red="0.18146645019999999" green="1" blue="0.69569371319999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="southafrica-1"/>
+                                <connections>
+                                    <segue destination="1dh-YE-808" kind="show" id="ndZ-Id-CXD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SOUTH AFRICA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-VB-fyJ">
+                                <rect key="frame" x="187" y="252" width="134" height="22.5"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igh-Ze-lGR">
+                                <rect key="frame" x="0.0" y="440" width="188" height="188"/>
+                                <color key="backgroundColor" red="0.18146645019999999" green="1" blue="0.69569371319999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Spain"/>
+                                <connections>
+                                    <segue destination="1dh-YE-808" kind="show" id="JYy-Ye-jca"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPAIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oah-V7-YeO">
+                                <rect key="frame" x="0.0" y="439" width="134" height="22.5"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="The Spanish siesta: myth or reality?" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZl-83-0Oa">
+                                <rect key="frame" x="8" y="570" width="171" height="52.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-G6-9q4">
+                                <rect key="frame" x="187" y="440" width="188" height="188"/>
+                                <color key="backgroundColor" red="0.18146645019999999" green="1" blue="0.69569371319999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Sweden"/>
+                                <connections>
+                                    <segue destination="1dh-YE-808" kind="show" id="PvV-pE-FYg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SWEDEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bn6-Ti-teW">
+                                <rect key="frame" x="187" y="439" width="134" height="22.5"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="1" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Sweden's backlash: Why the tide is turning for refugees" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-ee-wGw">
+                                <rect key="frame" x="195" y="551" width="171" height="71"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Trump can't 'jump around' to Everlast's song" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYw-x5-0s0">
+                                <rect key="frame" x="195" y="369" width="171" height="71"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TOP TODAY" id="7bo-wu-kiu"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sw9-3d-mb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898.5" y="1246.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MSX-lp-50Y">
+            <objects>
+                <viewController id="1dh-YE-808" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XNp-sK-QSp"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhJ-Zd-MMH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7ay-9K-HoM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="africadetail" translatesAutoresizingMaskIntoConstraints="NO" id="EER-14-GaO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbk-Id-94Q">
+                                <rect key="frame" x="20" y="327" width="335" height="291"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The rapper Everlast has became the latest musician to voice anger at Republican presidential frontrunner Donald Drumpf’s use of a song, demanding that he stop playing Jump Around at rallies.
+
+In a series of acerbic social media posts late Monday, Everlast said that his lawyers had informed Drumpf that he does not have the right to play the 1992 hit by the rapper’s former band House of Pain.
+
+“I would love to meet you and smack that comb-over right off your scalp,” he wrote on Instagram in one of his less profane statements, describing Drumpf as “ignorant” and “racist.”</string>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJh-pH-WaK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34683804899999998" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Trump can't 'jump around' to Everlast's song" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIy-qU-7SC">
+                                <rect key="frame" x="20" y="182" width="335" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="southafrica" translatesAutoresizingMaskIntoConstraints="NO" id="64Z-vc-XPT">
+                                <rect key="frame" x="221" y="286.5" width="134" height="22.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kS-4r-QEn">
+                                <rect key="frame" x="20" y="317" width="335" height="2"/>
+                                <color key="backgroundColor" red="0.1843137255" green="1" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shaun Tandon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e45-vw-c6m">
+                                <rect key="frame" x="25" y="272.5" width="114" height="22.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="August, 10 1992" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWH-lZ-ecZ">
+                                <rect key="frame" x="25" y="293" width="135" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1r-7c-exA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373.5" y="1246.5"/>
+        </scene>
+        <!--Nav Bar Controller-->
+        <scene sceneID="t8U-Gv-2nO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MEe-zp-CnQ" customClass="NavBarController" customModule="Globalite" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icon2" id="o9D-KM-cg6">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RcV-bd-QRa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gi5-eq-qj2" kind="relationship" relationship="rootViewController" id="25C-LR-Wt7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEf-ZE-y2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="432"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NpS-mO-3ON">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="41r-Ji-HnA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icon1" id="Rsg-8W-9Bu">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c63-zC-5J6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S8a-kq-OZh" kind="relationship" relationship="rootViewController" id="67K-hj-vqr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kT-mC-Use" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="1246"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Russia" width="188" height="188"/>
+        <image name="Spain" width="188" height="188"/>
+        <image name="Sweden" width="188" height="188"/>
+        <image name="africadetail" width="375" height="200"/>
+        <image name="france" width="188" height="188"/>
+        <image name="germany" width="188" height="188"/>
+        <image name="icon1" width="20" height="20"/>
+        <image name="icon2" width="22" height="20"/>
+        <image name="southafrica" width="134" height="22"/>
+        <image name="southafrica-1" width="188" height="188"/>
+        <image name="timesofindia" width="134" height="22"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="y9M-wb-tpm"/>
+    </inferredMetricsTieBreakers>
+</document>

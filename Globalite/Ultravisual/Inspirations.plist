@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Panama Papers</string>
+		<key>Background</key>
+		<string>panamapapers</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>US Elections</string>
+		<key>Background</key>
+		<string>elections</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Refugee Crisis</string>
+		<key>Background</key>
+		<string>refugee</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>War in Syria</string>
+		<key>Background</key>
+		<string>syrian</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>ISIS</string>
+		<key>Background</key>
+		<string>isis</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Pope Francis</string>
+		<key>Background</key>
+		<string>pope</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Iran Nuclear Deal</string>
+		<key>Background</key>
+		<string>iran</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Climate Change</string>
+		<key>Background</key>
+		<string>climate</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Technology</string>
+		<key>Background</key>
+		<string>tech</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Sports</string>
+		<key>Background</key>
+		<string>sports</string>
+	</dict>
+</array>
+</plist>
